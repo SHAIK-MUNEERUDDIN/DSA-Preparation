@@ -82,3 +82,18 @@ function fibonacciNum(num) {
   return next;
 }
 console.log(fibonacciNum(6));
+
+/*
+6.Find the missing number in the array
+
+[0,1,3,4,5] should return 2
+*/
+function missingNumber(nums) {
+  let sum = 0,
+    len = nums.length;
+  for (let i = 0; i < len; i++) {
+    sum += nums[i];
+  }
+  return (len * (len + 1)) / 2 - sum;
+}
+console.log(missingNumber([0, 1, 2, 4, 5, 6, 7]));
