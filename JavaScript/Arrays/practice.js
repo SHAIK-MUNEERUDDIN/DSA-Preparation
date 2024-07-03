@@ -55,3 +55,35 @@ function learnDeepCopy() {
   console.log(arr4, arr1);
 }
 learnDeepCopy();
+
+//Adding array
+function addArrays(arr1, arr2) {
+  //   return arr1.concat(arr2);
+  return [...arr1, ...arr2];
+}
+console.log(addArrays([1, 2, 3, 4], [5, 6, 7, 8]));
+
+/*
+3.Check if two array are equal.
+*/
+const compareArrays = (arr1, arr2) => {
+  //   if (arr1.length !== arr2.length) {
+  //     return false;
+  //   }
+
+  //   for (let i = 0; i < arr1.length; i++) {
+  //     if (arr1[i] !== arr2[i]) {
+  //       return false;
+  //     }
+  //   }
+  //   return true;
+
+  //   return (
+  //     arr1.length === arr2.length && arr1.every((elem, i) => elem === arr2[i])
+  //   );
+
+  return (
+    arr1.length === arr2.length && !arr1.some((elem, i) => elem !== arr2[i])
+  );
+};
+console.log(compareArrays([2, 4, 6, 8], [2, 4, 6, 8]));
