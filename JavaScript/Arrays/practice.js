@@ -87,3 +87,14 @@ const compareArrays = (arr1, arr2) => {
   );
 };
 console.log(compareArrays([2, 4, 6, 8], [2, 4, 6, 8]));
+
+//Using Map,Filter,Reduce,Find on arrays
+{
+  let arr = [5, 4, 3, 6, 7, 25, 15];
+
+  console.log(arr.map((elem, i) => elem * elem)); //returns an array containing square of all elements
+  console.log(arr.filter((elem, i) => elem % 2 == 0)); //returns even numbers in the array
+  console.log(arr.reduce((acc, elem) => acc + elem, 0)); //returns sum of elements of array
+  console.log(arr.find((elem, i) => elem > 10)); // returns the first element the fullfils the condition
+  console.log([1, 2, [3, [4, 5]]].flat(2));
+}
