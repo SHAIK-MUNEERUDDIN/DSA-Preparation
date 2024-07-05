@@ -98,3 +98,14 @@ console.log(compareArrays([2, 4, 6, 8], [2, 4, 6, 8]));
   console.log(arr.find((elem, i) => elem > 10)); // returns the first element the fullfils the condition
   console.log([1, 2, [3, [4, 5]]].flat(2));
 }
+
+var countOdds = function (low, high) {
+  let count = 0;
+  for (let i = low; i <= high; i++) {
+    if (i % 2 !== 0) {
+      count++;
+    }
+  }
+  return count;
+};
+console.log(countOdds(1, 10));
